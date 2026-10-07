@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------------------
+# Modelo da rede de filas em tandem exigida no Modulo 6
+#
+#   Fila 1 - G/G/2/3, chegadas entre 1..5, atendimento entre 4..5
+#   Fila 2 - G/G/1/5, atendimento entre 1..3 (sem chegadas do exterior)
+#   100% dos clientes atendidos na Fila 1 seguem para a Fila 2
+#   Filas inicialmente vazias, primeira chegada no tempo 2,5
+#   Simulacao encerrada ao utilizar o 100.000o numero pseudoaleatorio
+# ---------------------------------------------------------------------------
+
+semente     1
+aleatorios  100000
+
+fila F1 servidores=2 capacidade=3 atendimento=4..5 chegada=1..5 primeira_chegada=2.5
+fila F2 servidores=1 capacidade=5 atendimento=1..3
+
+rota F1 -> F2    : 1.0
+rota F2 -> SAIDA : 1.0
