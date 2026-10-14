@@ -1,17 +1,15 @@
-# Atividade M9 — Simulação de rede de filas (Assistência técnica de eletrônicos)
+# Atividade T2 — Simulação de rede de filas (Assistência técnica de eletrônicos)
 
 Disciplina: Simulação e Métodos Analíticos (PUCRS)
 
 ## Arquivos
 | Arquivo | Conteúdo |
 |---|---|
-| `apresentacao_M9.pptx` | Apresentação (7 slides: capa, descrição, modelo, resultados, proposta, comparação, conclusões). As notas de cada slide servem de roteiro para o vídeo |
 | `modelo_inicial.yml` / `modelo_melhorado.yml` | Modelos simulados antes e depois da melhoria |
 | `resultado_inicial.txt` / `resultado_melhorado.txt` | Saída do simulador (semente 1, 100.000 aleatórios) |
 | `indices_simulacao.xlsx` | Planilha com fórmulas dos índices (N, X, U, R) e comparação |
 | `simulador.py` | Simulador G/G/c/K (mesmo código usado nos módulos anteriores) |
 | `indices.py` | Calcula N, X, U e R a partir da simulação |
-| `simulator.jar` | Simulador do módulo 3, usado como verificador |
 
 ## Como executar
 Requisito: Python 3.8+ (PyYAML é opcional).
@@ -29,8 +27,3 @@ Para cada fila, com π(n) = tempo acumulado em n / tempo total, c servidores e �
 - Vazão: X = μ · Σ min(n, c)·π(n)
 - Utilização: U = Σ min(n, c)·π(n) / c
 - Tempo de resposta: R = N / X
-
-Confira se estas fórmulas coincidem com as apresentadas no módulo M9.
-
-## Vídeo
-Gravar a apresentação no Zoom (compartilhando os slides), subir no YouTube e colocar o link na entrega.
